@@ -1,4 +1,8 @@
 # First Step Install on all the nodes
+
+## Install packages to allow apt to use a repository over HTTPS
+apt-get update && apt-get install -y \
+  apt-transport-https ca-certificates curl software-properties-common gnupg2
 # Add the docker repository key. GPG uses a method of encryption known as public key (asymmetric) cryptography, which provides a number of advantages and benefits. 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
